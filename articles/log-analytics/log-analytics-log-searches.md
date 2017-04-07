@@ -308,7 +308,7 @@ Type=SecurityEvent
 If you want to view the highest value for all of the security events given a common Computer, the group by field, you can use
 
 ```
-Type=ConfigurationAlert | Measure Max(Level) by Computer
+Type=SecurityEvent | Measure Max(Level) by Computer
 ```
 
 ![search measure max computer](./media/log-analytics-log-searches/oms-search-measure-max02.png)
@@ -316,7 +316,7 @@ Type=ConfigurationAlert | Measure Max(Level) by Computer
 It will display that for the computers that had **Level** records, most of them have at least level 8, many had a level of 16.
 
 ```
-Type=ConfigurationAlert | Measure Max(Severity) by Computer
+Type=SecurityEvent | Measure Max(Severity) by Computer
 ```
 
 ![search measure max time generated computer](./media/log-analytics-log-searches/oms-search-measure-max03.png)
